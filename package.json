@@ -1,5 +1,5 @@
 {
-  "name": "ranker-course",
+  "name": "ranker",
   "version": "0.0.1",
   "description": "Make decisions with friends via ranked voting!",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "server"
   ],
   "scripts": {
-    "docker:compose": "docker-compose up -d",
+    "docker:compose": "docker compose up -d",
     "client:dev": "npm run dev --workspace=client",
     "server:dev": "wait-on tcp:6379 && npm run start:dev --workspace=server",
     "start": "concurrently 'npm:docker:compose' 'npm:server:dev' 'npm:client:dev'",
@@ -16,22 +16,15 @@
     "stop": "docker-compose down",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JacobSNGoodwin/ranker.git"
-  },
   "keywords": [
     "ts",
     "react",
     "nestjs",
     "socketjs"
   ],
-  "author": "Jacob Goodwin",
+  "author": "rafsan",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JacobSNGoodwin/ranker/issues"
-  },
-  "homepage": "https://github.com/JacobSNGoodwin/ranker#readme",
+  "homepage": "",
   "devDependencies": {
     "@types/webpack": "^5.28.0",
     "concurrently": "^7.0.0",
